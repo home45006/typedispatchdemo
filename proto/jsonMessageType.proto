@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package="com.wtcar.mqtt.json.common.enums";
+option java_multiple_files = true;
+
+/**
+ * 消息类型
+ */
+enum JsonMessageType {
+
+    /**上报数据*/
+    REPORT = 0;
+    /**请求报文*/
+    REQUEST = 1;
+    /**响应报文*/
+    RESPONSE = 2;
+}
