@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_package="com.wtcar.mqtt.json.common";
+option java_multiple_files = true;
+import "JsonMessageType.proto";
+
+message JsonMessage {
+
+    /**
+     * 消息分类
+     **/
+    JsonMessageType jsonMessageType = 1;
+
+    /**
+     * 协议版本
+     */
+    string protocol = 2;
+}

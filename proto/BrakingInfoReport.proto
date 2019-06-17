@@ -1,0 +1,22 @@
+syntax = "proto3";
+option java_package="com.wtcar.mqtt.json.report";
+option java_multiple_files = true;
+import "ReportMessage.proto";
+import "BrakingInfo.proto";
+
+message BrakinginfoReport {
+
+    /**
+     * 上报消息类型
+     **/
+    ReportMessage reportMessage = 1;
+
+    /**
+     * 上报消息内容
+     **/
+    Data data = 2;
+}
+
+message Data {
+    repeated BrakingInfo brakingInfo = 1; // 等价于java中的List<string> args
+}

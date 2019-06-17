@@ -1,17 +1,17 @@
 syntax = "proto3";
 option java_package="com.wtcar.mqtt.json.common";
 option java_multiple_files = true;
-import "jsonMessageType.proto";
+import "JsonMessage.proto";
 
-message JsonMessage {
+message ReportMessage {
 
     /**
      * 消息分类
      **/
-    JsonMessageType jsonMessageType = 1;
+    JsonMessage jsonMessage = 1;
 
     /**
-     * 协议版本
-     */
-    string protocol = 2;
+	 * 行程ID
+	 */
+    int32 tripId = 2;
 }

@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package="com.wtcar.mqtt.json.report";
+option java_multiple_files = true;
+
+message BrakingInfo {
+
+    /**
+     * 事件产生的时间(单位毫秒)
+     */
+    int64 rts = 1;
+
+    /**
+     * 制动液位
+     */
+    float bol = 2;
+}
